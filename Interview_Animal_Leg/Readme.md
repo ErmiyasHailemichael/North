@@ -133,4 +133,4 @@ Return 0   Loop
 ---
 ## Youtube
 
-[Watch the solution explanation](https://youtu.be/Vp2we1BWDOs)
+[Watch the solution explanation](https://youtu.be/)
