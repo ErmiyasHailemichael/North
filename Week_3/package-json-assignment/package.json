@@ -4,8 +4,33 @@
   "description": "A Node.js project to explore and understand package.json configuration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest",
+    "dev": "nodemon index.js"
   },
-  "author": "Ermiyas",
-  "license": "ISC"
+  "keywords": [
+    "node",
+    "npm",
+    "package.json",
+    "dependencies"
+  ],
+  "author": "Ermiyas Hailemichael",
+  "license": "ISC",
+  "homepage": "https://github.com/ErmiyasHailemichael",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErmiyasHailemichael/North.git",
+    "directory": "Week_3/package-json-assignment"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.11"
+  }
 }
