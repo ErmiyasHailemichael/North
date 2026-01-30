@@ -38,10 +38,25 @@ app.get('/foo', (req, res) => {
   res.send('and sometimes that');
 });
 
-// Route 5: Regular expression route (Fixed for Express 5)
-// Matches both /user and /username
-app.get(/\/user(name)?/, (req, res) => {
+// Route 5: Regular expression route
+app.get(/\/user(name)?$/, (req, res) => {
   res.send('Matched: ' + req.path);
+});
+
+// Route 6: Dynamic route with parameter
+app.get('/user/:username', (req, res) => {
+  const username = req.params.username;
+  res.send(`Hello ${username}`);
+});
+
+// Route 7: Query string handling
+app.get('/get', (req, res) => {
+  // Log query parameters to console
+  console.log('Query parameters received:');
+  console.log(req.query);
+  
+  // Send response showing the query parameters
+  res.send(`Query parameters: ${JSON.stringify(req.query)}`);
 });
 
 // ========================================
