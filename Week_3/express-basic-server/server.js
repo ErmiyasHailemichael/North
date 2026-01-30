@@ -4,45 +4,44 @@ const express = require('express');
 // Create Express application instance
 const app = express();
 
-// Define port (use environment variable or default to 3000)
+// Define port 
 const port = process.env.PORT || 3000;
 
 // ========================================
 // ROUTES
 // ========================================
 
-// Route 1: Root path 
+// Route 1: Root path
 app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-// Route 2: About path 
+// Route 2: About path
 app.get('/about', (req, res) => {
   res.send('About page');
 });
 
-// Route 3: Conditional routing - /foo
-// First handler - randomly decides what to do
+// Route 3 & 4: Conditional routing with /foo
 app.get('/foo', (req, res, next) => {
-  // Generate random number between 0 and 1
   const random = Math.random();
-  
-  console.log(`Random value: ${random}`); 
+  console.log(`Random value: ${random}`);
   
   if (random > 0.5) {
-    // 50% chance - send response and stop
     res.send('sometimes this');
   } else {
-    // 50% chance - pass control to next handler
     console.log('Calling next()...');
     next();
   }
 });
 
-// Route 4: Second handler for /foo
-// Only runs if first handler calls next()
 app.get('/foo', (req, res) => {
   res.send('and sometimes that');
+});
+
+// Route 5: Regular expression route (Fixed for Express 5)
+// Matches both /user and /username
+app.get(/\/user(name)?/, (req, res) => {
+  res.send('Matched: ' + req.path);
 });
 
 // ========================================
