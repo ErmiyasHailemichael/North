@@ -165,7 +165,7 @@ export default defineConfig([
   },
 ]);
 ```
-
+![alt text](<Screenshot 2026-01-29 at 4.12.44 PM.png>)
 ---
 
 ### Step 5: Created Test File
@@ -512,32 +512,6 @@ The second version is easier to scan and understand.
 
 ---
 
-### 6. Educational Value
-
-**What I learned:**
-
-1. **JavaScript Best Practices**
-   - Why semicolons matter (ASI pitfalls)
-   - Consistency in quote usage
-   - Importance of cleaning up unused code
-
-2. **Tool Configuration**
-   - How to read and modify configuration files
-   - Understanding JSON/JavaScript config formats
-   - Working with npm scripts
-
-3. **Development Workflow**
-   - Linting as part of development process
-   - Auto-fixing vs manual fixes
-   - When to use strict rules vs warnings
-
-4. **Problem Solving**
-   - Debugging configuration issues
-   - Understanding error messages
-   - Finding appropriate solutions
-
----
-
 ### 7. Integration with Development Workflow
 
 **Added npm scripts for easy linting:**
@@ -611,28 +585,6 @@ The second version is easier to scan and understand.
 
 ---
 
-### Practical Application
-
-**This project demonstrated:**
-1. Setting up ESLint from scratch
-2. Configuring rules for specific needs
-3. Using auto-fix capabilities
-4. Understanding when manual fixes are required
-5. Integrating linting into development workflow
-
-**Skills gained:**
-- Tool configuration and customization
-- Reading and understanding error messages
-- Balancing strictness with practicality
-- Automating code quality checks
-
-**Real-world readiness:**
-- Can set up ESLint in future projects
-- Understand how to adapt rules to team needs
-- Know how to troubleshoot configuration issues
-- Ready to work in lint-enforced environments
-
----
 
 ### Final Thoughts
 
@@ -641,13 +593,5 @@ ESLint transformed my approach to code quality. What started as a simple assignm
 - Tool-assisted quality control
 - The importance of consistency
 - Automation in software development
-
-**The most powerful insight:** Good code isn't just about functionality—it's about maintainability, readability, and consistency. ESLint makes achieving these goals automatic rather than aspirational.
-
-**Moving forward:** I plan to use ESLint in all my JavaScript projects and explore:
-- Additional plugins for specific frameworks
-- Integration with Git hooks and CI/CD
-- Custom rules for project-specific patterns
-- Advanced configuration for monorepos
 
 ---
