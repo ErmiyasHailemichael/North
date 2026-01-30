@@ -51,12 +51,20 @@ app.get('/user/:username', (req, res) => {
 
 // Route 7: Query string handling
 app.get('/get', (req, res) => {
-  // Log query parameters to console
   console.log('Query parameters received:');
   console.log(req.query);
-  
-  // Send response showing the query parameters
   res.send(`Query parameters: ${JSON.stringify(req.query)}`);
+});
+
+// ========================================
+// ERROR HANDLING
+// ========================================
+
+// 404 Handler 
+// Catches all requests that didn't match any route above
+app.use((req, res) => {
+  console.log(`404 - Route not found: ${req.method} ${req.url}`);
+  res.status(404).send('404 - Not Found');
 });
 
 // ========================================
