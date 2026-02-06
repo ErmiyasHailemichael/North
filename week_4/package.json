@@ -1,0 +1,24 @@
+{
+  "name": "inventory-management-interview",
+  "version": "1.0.0",
+  "description": "Technical interview solution: Inventory Management System - Duplicate Zeros in Place",
+  "main": "inventory-solution.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "demo": "node demo.js"
+  },
+  "keywords": [
+    "interview",
+    "algorithm",
+    "array",
+    "in-place",
+    "zero-duplication"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
