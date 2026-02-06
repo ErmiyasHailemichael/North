@@ -142,6 +142,14 @@ START
 
 ---
 
+## 🎥 Video Walkthrough
+
+Watch a complete walkthrough of the solution approach and implementation:
+
+[![Duplicate Zeros Algorithm Walkthrough](https://img.youtube.com/vi/oba2X0FWoZE/maxresdefault.jpg)](https://youtu.be/oba2X0FWoZE)
+
+---
+
 ### Quick Start
 
 ```bash
