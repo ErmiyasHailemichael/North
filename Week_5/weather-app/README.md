@@ -1,8 +1,8 @@
-# Weather Dashboard 🌤️
+# Weather Dashboard
 
 A simple and elegant weather application that provides current weather information for cities worldwide using the Weatherstack API.
 
-## 📋 Table of Contents
+## Table of Contents
 - [Features](#features)
 - [Demo](#demo)
 - [Installation](#installation)
@@ -14,7 +14,7 @@ A simple and elegant weather application that provides current weather informati
 - [Contributing](#contributing)
 - [License](#license)
 
-## ✨ Features
+## Features
 
 - **Current Weather Data**: Get real-time weather information for any city
 - **Beautiful UI**: Clean, responsive design with gradient backgrounds
@@ -23,7 +23,7 @@ A simple and elegant weather application that provides current weather informati
 - **Loading States**: User-friendly loading indicators
 - **Mobile Responsive**: Works perfectly on all device sizes
 
-## 🎯 Demo
+## Demo
 
 ![Weather Dashboard Screenshot](screenshot.png)
 
@@ -33,7 +33,7 @@ A simple and elegant weather application that provides current weather informati
 - See detailed weather metrics
 - Responsive design for mobile and desktop
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 - Node.js (version 14 or higher)
@@ -72,7 +72,7 @@ npm start
 5. **Open your browser**
 Navigate to `http://localhost:3000`
 
-## 💡 Usage
+## Usage
 
 ### Basic Usage
 1. Open the application in your web browser
@@ -101,7 +101,7 @@ GET /api/weather?city=London
 }
 ```
 
-## 📚 API Reference
+## API Reference
 
 ### Weather Endpoint
 
@@ -145,7 +145,7 @@ GET /api/weather?city=London
 ```
 
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Backend:**
   - Node.js
@@ -165,7 +165,7 @@ GET /api/weather?city=London
   - Node.js built-in test runner
   - dotenv for environment management
 
-## 📁 Project Structure
+## Project Structure
 ```
 weather-app/
 ├── src/
@@ -186,7 +186,7 @@ weather-app/
 └── README.md                  # Project documentation
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 | Variable              | Description                    | Required |
@@ -197,3 +197,5 @@ weather-app/
 
 
 
+## Link video
+[Demo video](https://youtu.be/VbsTd_B-Mfg)

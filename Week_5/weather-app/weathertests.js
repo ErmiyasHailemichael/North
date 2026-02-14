@@ -1,14 +1,7 @@
 const { describe, test, before } = require('node:test');
 const assert = require('node:assert');
-const weatherService = require('./services/weatherService');
+const weatherService = require('.weathertests.js');
 
-/**
- * Weather Dashboard Test Suite
- * 
- * This test file contains 6+ test cases covering:
- * - Normal cases: Valid city searches
- * - Edge cases: Invalid inputs, API errors, special characters
- */
 
 describe('Weather Dashboard - Test Suite', () => {
     
@@ -68,8 +61,8 @@ describe('Weather Dashboard - Test Suite', () => {
             assert.strictEqual(typeof result.cloudcover, 'number', 'Cloud cover should be a number');
             assert.ok(result.wind_direction, 'Wind direction should be present');
             
-            console.log(`   ✅ Successfully fetched weather for ${result.city}`);
-            console.log(`   ☁️ Cloud cover: ${result.cloudcover}%, Visibility: ${result.visibility} km\n`);
+            console.log(`   Successfully fetched weather for ${result.city}`);
+            console.log(`   Cloud cover: ${result.cloudcover}%, Visibility: ${result.visibility} km\n`);
         });
     });
 
@@ -80,7 +73,7 @@ describe('Weather Dashboard - Test Suite', () => {
     describe('Edge Cases - Invalid Inputs & Error Handling', () => {
         
         test('Test 4: Should reject empty string city name', async () => {
-            console.log('🔍 Testing: Empty string validation');
+            console.log('Testing: Empty string validation');
             
             try {
                 await weatherService.getCurrentWeather('');
@@ -88,12 +81,12 @@ describe('Weather Dashboard - Test Suite', () => {
             } catch (error) {
                 assert.ok(error instanceof Error, 'Should throw an Error');
                 assert.match(error.message, /required|empty/i, 'Error message should mention required/empty');
-                console.log(`   ✅ Correctly rejected empty city: "${error.message}"\n`);
+                console.log(`   Correctly rejected empty city: "${error.message}"\n`);
             }
         });
 
         test('Test 5: Should reject whitespace-only city name', async () => {
-            console.log('🔍 Testing: Whitespace-only validation');
+            console.log('Testing: Whitespace-only validation');
             
             try {
                 await weatherService.getCurrentWeather('   ');
@@ -101,12 +94,12 @@ describe('Weather Dashboard - Test Suite', () => {
             } catch (error) {
                 assert.ok(error instanceof Error, 'Should throw an Error');
                 assert.match(error.message, /required|empty/i, 'Error message should mention required/empty');
-                console.log(`   ✅ Correctly rejected whitespace input: "${error.message}"\n`);
+                console.log(`   Correctly rejected whitespace input: "${error.message}"\n`);
             }
         });
 
         test('Test 6: Should handle non-existent city gracefully', async () => {
-            console.log('🔍 Testing: Invalid city name error handling');
+            console.log('Testing: Invalid city name error handling');
             
             try {
                 await weatherService.getCurrentWeather('XYZInvalidCity12345');
@@ -115,7 +108,7 @@ describe('Weather Dashboard - Test Suite', () => {
                 assert.ok(error instanceof Error, 'Should throw an Error');
                 // WeatherStack returns an error for invalid cities
                 assert.ok(error.message, 'Should have an error message');
-                console.log(`   ✅ Correctly handled invalid city: "${error.message}"\n`);
+                console.log(`   Correctly handled invalid city: "${error.message}"\n`);
             }
         });
     });
@@ -127,22 +120,22 @@ describe('Weather Dashboard - Test Suite', () => {
     describe('Bonus Edge Cases - Special Characters & Formats', () => {
         
         test('Test 7: Should handle city names with special characters', async () => {
-            console.log('📍 Testing: Special characters in city name (São Paulo)');
+            console.log('Testing: Special characters in city name (São Paulo)');
             
             try {
                 const result = await weatherService.getCurrentWeather('São Paulo');
                 assert.ok(result, 'Result should exist');
                 assert.ok(result.city, 'City name should be present');
-                console.log(`   ✅ Successfully handled special characters: ${result.city}\n`);
+                console.log(`   Successfully handled special characters: ${result.city}\n`);
             } catch (error) {
                 // If API doesn't support this city, that's also valid error handling
-                console.log(`   ✅ API returned expected error for special chars: ${error.message}\n`);
+                console.log(`   API returned expected error for special chars: ${error.message}\n`);
                 assert.ok(true, 'Handled gracefully');
             }
         });
 
         test('Test 8: Should handle very long city names', async () => {
-            console.log('🔍 Testing: Extremely long input validation');
+            console.log('Testing: Extremely long input validation');
             
             const longCityName = 'A'.repeat(200);
             
@@ -152,12 +145,12 @@ describe('Weather Dashboard - Test Suite', () => {
                 assert.fail('Should have thrown error or returned no match');
             } catch (error) {
                 assert.ok(error instanceof Error, 'Should throw an Error');
-                console.log(`   ✅ Correctly handled long input: "${error.message}"\n`);
+                console.log(`   Correctly handled long input: "${error.message}"\n`);
             }
         });
 
         test('Test 9: Should validate API key presence', async () => {
-            console.log('🔍 Testing: API key validation');
+            console.log('Testing: API key validation');
             
             // Save original API key
             const originalKey = weatherService.apiKey;
@@ -171,7 +164,7 @@ describe('Weather Dashboard - Test Suite', () => {
             } catch (error) {
                 assert.ok(error instanceof Error, 'Should throw an Error');
                 assert.match(error.message, /API key/i, 'Error should mention API key');
-                console.log(`   ✅ Correctly validated API key requirement: "${error.message}"\n`);
+                console.log(`   Correctly validated API key requirement: "${error.message}"\n`);
             } finally {
                 // Restore API key
                 weatherService.apiKey = originalKey;
@@ -186,7 +179,7 @@ describe('Weather Dashboard - Test Suite', () => {
     describe('Data Format Validation', () => {
         
         test('Test 10: Should return properly formatted weather data', async () => {
-            console.log('📊 Testing: Data structure validation');
+            console.log('Testing: Data structure validation');
             
             const result = await weatherService.getCurrentWeather('Paris');
             
@@ -210,12 +203,11 @@ describe('Weather Dashboard - Test Suite', () => {
             assert.strictEqual(typeof result.temperature, 'number', 'Temperature should be number');
             assert.strictEqual(typeof result.humidity, 'number', 'Humidity should be number');
             
-            console.log(`   ✅ All required fields present and properly formatted\n`);
+            console.log(`   All required fields present and properly formatted\n`);
         });
     });
 });
 
-// Test summary will be printed automatically by Node test runner
 console.log('\n' + '='.repeat(60));
 console.log('Test Suite Complete!');
 console.log('='.repeat(60) + '\n');

@@ -1,6 +1,6 @@
-# 🐶 Dog API Fetch Project
+# Dog API Fetch Project
 
-## 📌 Project Overview
+## Project Overview
 
 This project demonstrates how to use the **JavaScript Fetch API** to retrieve and display data from the Dog API.
 
@@ -21,9 +21,9 @@ The project focuses on:
 
 ---
 
-## 🚀 Features
+## Features
 
-### ✅ Fetch Dog Breeds
+### Fetch Dog Breeds
 
 * Sends a GET request to:
 
@@ -32,7 +32,7 @@ The project focuses on:
   ```
 * Displays breed names in a clickable list.
 
-### ✅ Breed Details
+### Breed Details
 
 * When a breed is clicked:
 
@@ -45,7 +45,7 @@ The project focuses on:
     * Weight range
     * Hypoallergenic status
 
-### ✅ Dog Facts
+### Dog Facts
 
 * Fetches up to 3 random dog facts using:
 
@@ -53,7 +53,7 @@ The project focuses on:
   /facts?limit=3
   ```
 
-### ✅ Dog Groups
+### Dog Groups
 
 * Fetches dog groups using:
 
@@ -61,7 +61,7 @@ The project focuses on:
   /groups
   ```
 
-### ✅ Error Handling
+### Error Handling
 
 * Checks `response.ok`
 * Throws errors for bad responses
@@ -70,7 +70,7 @@ The project focuses on:
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 * HTML5
 * JavaScript (ES6+)
@@ -79,7 +79,7 @@ The project focuses on:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 dog-api-project/
@@ -91,7 +91,7 @@ dog-api-project/
 
 ---
 
-## ▶️ How to Run the Project
+## How to Run the Project
 
 ### Option 1: Open Directly in Browser
 
@@ -109,7 +109,7 @@ If using VS Code:
 
 ---
 
-## 🌐 API Endpoints Used
+## API Endpoints Used
 
 | Feature       | Endpoint         |
 | ------------- | ---------------- |

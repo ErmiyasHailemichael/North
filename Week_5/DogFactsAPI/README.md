@@ -17,9 +17,9 @@ This project demonstrates:
 
 ---
 
-## 🚀 Features
+## Features
 
-### ✅ GET /facts
+### GET /facts
 
 Returns random dog facts.
 
@@ -33,7 +33,7 @@ Returns random dog facts.
 
 ---
 
-## 📥 Example Requests
+## Example Requests
 
 ### Get all facts
 
@@ -61,7 +61,7 @@ GET /facts?number=1&raw=true
 
 ---
 
-## 📤 Example JSON Response
+## Example JSON Response
 
 ```json
 {
@@ -74,7 +74,7 @@ GET /facts?number=1&raw=true
 
 ---
 
-## ❌ Example Error Response
+## Example Error Response
 
 ```json
 {
@@ -87,7 +87,7 @@ Status Code: 400
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 * Node.js
 * Express.js
@@ -95,7 +95,7 @@ Status Code: 400
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 dog-facts-api/
@@ -108,22 +108,22 @@ dog-facts-api/
 
 ---
 
-## ▶️ How to Run the Project
+## How to Run the Project
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone <your-repo-url>
 cd dog-facts-api
 ```
 
-### 2️⃣ Install Dependencies
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3️⃣ Start the Server
+### Start the Server
 
 ```bash
 node server.js
@@ -137,7 +137,7 @@ http://localhost:3000
 
 ---
 
-## 🧪 Testing the API
+## Testing the API
 
 Open in browser or Postman:
 
