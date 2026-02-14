@@ -145,3 +145,6 @@ Open in browser or Postman:
 http://localhost:3000/facts
 ```
 
+## Video Link
+
+[Watch Video](https://youtu.be/IomPDqhPXw4)
