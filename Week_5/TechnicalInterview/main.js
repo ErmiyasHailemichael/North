@@ -24,7 +24,7 @@ async function generateTickets(queue, count) {
     
     for (let i = 0; i < count; i++) {
         const ticket = queue.takeTicket();
-        console.log(`✓ Customer arrived: ${ticket.toString()}`);
+        console.log(`Customer arrived: ${ticket.toString()}`);
         console.log(`  Queue size: ${queue.getRemainingCount()}`);
         
         // Random arrival interval (500-1500ms)
@@ -34,7 +34,7 @@ async function generateTickets(queue, count) {
         }
     }
     
-    console.log(`\n📊 Generation complete: ${queue.getRemainingCount()} customers waiting\n`);
+    console.log(`\nGeneration complete: ${queue.getRemainingCount()} customers waiting\n`);
 }
 
 /**
@@ -51,7 +51,7 @@ async function processTickets(queue) {
         served++;
         
         const waitTime = ticket.getWaitTime();
-        console.log(`🎫 Now serving: ${ticket.toString()}`);
+        console.log(`Now serving: ${ticket.toString()}`);
         console.log(`   Wait time: ${(waitTime / 1000).toFixed(2)} seconds`);
         console.log(`   Remaining in queue: ${queue.getRemainingCount()}`);
         
@@ -60,7 +60,7 @@ async function processTickets(queue) {
         await sleep(serviceTime);
     }
     
-    console.log(`\n✅ All customers served! Total: ${served}\n`);
+    console.log(`\nAll customers served! Total: ${served}\n`);
 }
 
 /**

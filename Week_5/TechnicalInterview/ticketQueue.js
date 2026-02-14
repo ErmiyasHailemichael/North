@@ -16,7 +16,7 @@ class TicketQueue {
      * Generate a new ticket and add to queue
      * Time Complexity: O(1)
      * Space Complexity: O(1)
-     * @returns {Ticket} The newly created ticket
+     * returns {Ticket} The newly created ticket
      */
     takeTicket() {
         const ticket = new Ticket(this.nextNumber++);
@@ -29,7 +29,7 @@ class TicketQueue {
      * Serve the next customer in queue
      * Time Complexity: O(1)
      * Space Complexity: O(1)
-     * @returns {Ticket|null} The served ticket or null if queue is empty
+     * returns {Ticket|null} The served ticket or null if queue is empty
      */
     serveCustomer() {
         if (this.isEmpty()) {
@@ -46,7 +46,7 @@ class TicketQueue {
      * Get count of customers waiting
      * Time Complexity: O(1)
      * Space Complexity: O(1)
-     * @returns {number} Number of tickets in queue
+     * returns {number} Number of tickets in queue
      */
     getRemainingCount() {
         return this.rear - this.front;
@@ -66,7 +66,7 @@ class TicketQueue {
      * Peek at next ticket without removing
      * Time Complexity: O(1)
      * Space Complexity: O(1)
-     * @returns {Ticket|null} Next ticket or null
+     * returns {Ticket|null} Next ticket or null
      */
     peek() {
         if (this.isEmpty()) {

@@ -62,7 +62,7 @@ TicketQueue
 ### Flow Diagram
 ```
 ┌─────────────────────────────────────┐
-│     START SIMULATION                │
+│     START                 
 └──────────┬──────────────────────────┘
            │
            ▼
@@ -360,3 +360,6 @@ serveCustomer() {
 - Front pointer keeps incrementing (but this is negligible)
 
 **Conclusion:** The O(1) operations make this the clear winner for a queue implementation.
+
+## Video Link
+[Video Link](https://youtu.be/u8CWfX49H20)
