@@ -1,9 +1,3 @@
-Perfect — let’s create a clean, professional `README.md` for your repository 👌
-
-You can copy this directly into your `README.md` file.
-
----
-
 # 🐶 Dog API Fetch Project
 
 ## 📌 Project Overview
@@ -131,3 +125,6 @@ https://dogapi.dog/api/v2
 ```
 
 ---
+
+## Link Video
+[Video](https://youtu.be/p3qSNBPRMps)
