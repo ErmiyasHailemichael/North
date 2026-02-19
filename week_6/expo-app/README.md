@@ -22,3 +22,6 @@ A cross-platform mobile app built with Expo and React Native that features a tab
 3. Options to view the app:
    - Press `w` to open in web browser
    - Scan the QR code with Expo Go app on your phone
+
+# video demo
+[add link here](https://)
