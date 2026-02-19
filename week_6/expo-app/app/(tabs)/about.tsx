@@ -89,7 +89,6 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   skillBadge: {
-    background: "#333",
     backgroundColor: "#333",
     padding: 6,
     paddingHorizontal: 12,
