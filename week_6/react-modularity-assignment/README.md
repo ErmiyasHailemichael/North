@@ -44,4 +44,4 @@ Open http://localhost:3000 in your browser.
 
 ## Video Tutorial
 
-[React Modularity - Component Imports/Exports](https://www.youtube.com/watch?v=example)
+[React Modularity - Component Imports/Exports](https://youtu.be/qbSQMASkwHU)
