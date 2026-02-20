@@ -24,4 +24,4 @@ A cross-platform mobile app built with Expo and React Native that features a tab
    - Scan the QR code with Expo Go app on your phone
 
 # video demo
-[add link here](https://)
+[Link](https://youtu.be/GepTqGNfXQ0)

@@ -22,6 +22,5 @@ A portfolio website built with Gatsby that showcases projects and includes an ab
 3. Open your browser at:
    http://localhost:8000
 
-
 # video demo
-[add link here](https://)
+[Link](https://youtu.be/GepTqGNfXQ0)

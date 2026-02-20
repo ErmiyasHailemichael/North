@@ -25,4 +25,4 @@ A blog application built with React Router (formerly Remix) that includes a home
 
 
 # video demo
-[add link here](https://)
+[Link](https://youtu.be/GepTqGNfXQ0)

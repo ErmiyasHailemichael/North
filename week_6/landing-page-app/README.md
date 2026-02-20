@@ -25,4 +25,4 @@ A simple landing page built with Next.js that includes a users list and dynamic 
 
 
 # video demo
-[add link here](https://)
+[Link](https://youtu.be/GepTqGNfXQ0)
