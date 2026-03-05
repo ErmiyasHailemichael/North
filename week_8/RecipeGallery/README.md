@@ -68,3 +68,6 @@ node --test src/__tests__/recipes.test.js
 - Node.js built-in test runner
 - CSS Grid & Flexbox
 - Google Fonts (Playfair Display + DM Sans)
+
+## Video demo
+[video demo](https://youtu.be/FkRO5pkGCd4)
