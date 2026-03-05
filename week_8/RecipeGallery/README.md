@@ -1,10 +1,3 @@
-Now the last step — the README! Vite already created a default one, so let's replace it.
-
-**Step 16: Update README.md**
-
-Open `README.md` in VS Code, **delete everything**, and paste this:
-
-```md
 # Recipe Gallery
 
 A React application that displays a curated gallery of recipes using list rendering with the `map()` method. Built with Vite + React for AD311 Intermediate Development 1 (Week 8).
@@ -18,37 +11,27 @@ A React application that displays a curated gallery of recipes using list render
 - 12 passing unit tests (6 normal + 6 edge cases)
 
 ## Project Structure
-
-````
+```
 recipe-gallery/
-├── .gitignore
-├── README.md
-├── eslint.config.js
 ├── index.html
-├── node_modules/
-├── package-lock.json
+├── vite.config.js
 ├── package.json
-├── public/
 ├── src/
-│   ├── App.css
+│   ├── main.jsx
 │   ├── App.jsx
-│   ├── __tests__/
-│   │   └── recipes.test.js
-│   ├── assets/
-│   ├── components/
-│   │   ├── RecipeCard.jsx
-│   │   └── RecipeGallery.jsx
+│   ├── App.css
 │   ├── data/
 │   │   └── recipes.js
-│   ├── index.css
-│   └── main.jsx
-└── vite.config.js
-````
+│   ├── components/
+│   │   ├── RecipeGallery.jsx
+│   │   └── RecipeCard.jsx
+│   └── __tests__/
+│       └── recipes.test.js
+```
 
 ## Getting Started
 
 ### Install & Run
-
 ```bash
 npm install
 npm run dev
@@ -57,7 +40,6 @@ npm run dev
 Then open http://localhost:5173 in your browser.
 
 ### Run Tests
-
 ```bash
 node --test src/__tests__/recipes.test.js
 ```
@@ -86,4 +68,3 @@ node --test src/__tests__/recipes.test.js
 - Node.js built-in test runner
 - CSS Grid & Flexbox
 - Google Fonts (Playfair Display + DM Sans)
-```
