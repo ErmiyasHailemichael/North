@@ -1,16 +1,55 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```md
+# My Product List
 
-Currently, two official plugins are available:
+A static product list built with React and Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## How to Run
 
-## React Compiler
+1. Navigate into the project directory:
+   ```
+   cd my-product-list
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Switch to Node 20:
+   ```
+   nvm use 20
+   ```
 
-## Expanding the ESLint configuration
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. Start the development server:
+   ```
+   npm run dev
+   ```
+
+5. Open your browser and go to `http://localhost:5173`
+
+## How to Run Tests
+
+```
+node --test src/ProductList.test.js
+```
+
+## Features
+
+- Renders a list of 5 products using React's `map()` function
+- Each product displays a name, description, and price
+- Each list item has a unique `key` prop using the product's `id`
+- `ProductList` is a separate reusable component imported into `App.jsx`
+
+## Test Cases
+
+**Normal Cases:**
+- Products array contains exactly 5 items
+- Every product has a unique id
+- Every product has a name, description, and price
+
+**Edge Cases:**
+- Filtering by a non-existent name returns an empty array
+- Filtering by price under $100 returns only the Mouse
+- Finding a product by id returns the correct product
+```
