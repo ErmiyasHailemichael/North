@@ -28,6 +28,8 @@ A static product list built with React and Vite.
 
 5. Open your browser and go to `http://localhost:5173`
 
+## video demo
+[Demo](https://youtu.be/kjeI8BmTsnQ)
 ## How to Run Tests
 
 ```
