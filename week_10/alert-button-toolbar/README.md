@@ -57,3 +57,7 @@ node --test src/AlertButton.test.js
 - `AlertButton` — reusable button component that takes `message` and `children` as props
 - `Toolbar` — renders multiple `AlertButton` components, each with unique props
 - Clicking any button triggers `alert(message)` with that button's specific message
+
+## Video
+[GitHub](https://github.com/ErmiyasHailemichael/North/tree/main/week_10/alert-button-toolbar)
+[Youtube](https://youtu.be/BH3cRmuqfPU)
