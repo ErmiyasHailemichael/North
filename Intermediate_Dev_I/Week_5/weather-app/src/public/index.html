@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 style="color: #333;">Weather Dashboard</h1>
+            <p style="color: #555;">Get current weather information for any city</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Search Section -->
+            <section class="search-section">
+                <form id="weather-form" class="search-form">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="city-input" 
+                            placeholder="Enter city name (e.g., New York, London, Tokyo)"
+                            required
+                            autocomplete="off"
+                        >
+                        <button type="submit" id="search-btn">Search</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Loading Indicator -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Getting weather data...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="error-message hidden">
+                <p id="error-text"></p>
+                <button id="retry-btn" class="retry-btn">Try Again</button>
+            </div>
+
+            <!-- Weather Display -->
+            <section id="weather-display" class="weather-display hidden">
+                <div class="weather-card">
+                    <!-- Main Weather Info -->
+                    <div class="weather-main">
+                        <div class="location-info">
+                            <h2 id="city-name"></h2>
+                            <p id="location-details"></p>
+                            <p id="local-time"></p>
+                        </div>
+                        <div class="temperature-info">
+                            <img id="weather-icon" src="" alt="Weather Icon" class="weather-icon">
+                            <div class="temp-display">
+                                <span id="temperature"></span>
+                                <span class="temp-unit">°C</span>
+                            </div>
+                            <p id="weather-description"></p>
+                        </div>
+                    </div>
+
+                    <!-- Additional Weather Details -->
+                    <div class="weather-details">
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Feels Like</span>
+                                <span id="feels-like" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Humidity</span>
+                                <span id="humidity" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Wind</span>
+                                <span id="wind" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Pressure</span>
+                                <span id="pressure" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Visibility</span>
+                                <span id="visibility" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Cloud Cover</span>
+                                <span id="cloudcover" class="detail-value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
