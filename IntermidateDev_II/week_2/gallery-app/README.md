@@ -37,3 +37,4 @@ A React application that displays an interactive recipe image gallery built with
 
 ## Video 
 [Video](https://youtu.be/D9DHDlKBVrw)
+
