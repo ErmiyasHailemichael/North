@@ -1,16 +1,41 @@
-# React + Vite
+# Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that manages a list of tasks using array state and the spread operator to ensure immutability.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add new tasks using an input field
+- Mark tasks as completed with a strikethrough effect
+- Undo completed tasks back to active
+- Empty state message when no tasks exist
+- Immutable state updates using spread operator and .map()
 
-## React Compiler
+## How to Run
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone the repository:
+   git clone <your-repo-url>
 
-## Expanding the ESLint configuration
+2. Navigate into the project folder:
+   cd task-manager-app
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Install dependencies:
+   npm install
+
+4. Start the development server:
+   npm run dev
+
+5. Open your browser and go to:
+   http://localhost:5173
+
+## Project Structure
+
+- src/TaskManager.jsx — main component with task state and toggle logic
+- src/App.jsx — root component that renders TaskManager
+
+## Built With
+
+- React
+- Vite
+
+## Video 
+- [Video](https://youtu.be/miSZL78Sye4)
