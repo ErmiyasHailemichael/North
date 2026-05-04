@@ -41,3 +41,6 @@ All data fetching is handled using TanStack Query with proper `isPending`, `isEr
 1. **Network error on breeds** – If the breeds endpoint fails, an error message is shown instead of crashing the app
 2. **Unknown breed ID** – If a breed detail fetch fails (bad ID), the error state is caught and displayed gracefully
 3. **Refetch facts** – Clicking "Load New Facts" triggers a fresh fetch; loading state is shown while the new data arrives
+
+## Demo
+[Video](https://youtu.be/9VXCYulYuss)
