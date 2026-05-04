@@ -42,3 +42,5 @@ A React Native (Expo) application built with TanStack Query that performs full C
 1. **Delete a post** – Clicking Delete removes the post from the list immediately
 2. **Patch title only** – Clicking Patch Title and submitting only updates the title, not the body
 3. **Clear filter** – Clicking Clear after filtering restores the full list of all posts
+
+## Demo
