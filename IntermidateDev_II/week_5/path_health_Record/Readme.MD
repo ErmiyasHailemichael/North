@@ -176,3 +176,5 @@ Requires Node.js and npm.
 ## Diagram
 - [Flow chart](https://excalidraw.com/#json=x-TigWkTYI3VVJhGDUHk8,yClfpOGfK-o6jfvBUsCqUw)
 - [Video](https://youtu.be/GEh3zx6nhbU)
+
+![Flow chart](<Screenshot 2026-05-10 at 2.50.35 PM.png>)
