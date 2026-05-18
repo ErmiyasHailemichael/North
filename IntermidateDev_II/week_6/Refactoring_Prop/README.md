@@ -69,3 +69,6 @@ Then open http://localhost:5173
 - `Context.Provider` — makes the value available to the entire subtree
 - `useContext()` — reads the nearest Provider's value without prop drilling
 - Pairing context with `useState` — allows both reading and updating shared state from any component
+
+## Demo 
+- [Demo ](https://youtu.be/LcDWSh73YM0)
