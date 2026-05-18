@@ -1,0 +1,267 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Theme base classes ─── */
+.light-mode {
+  --bg: #f5f0e8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b6560;
+  --accent: #c8410a;
+  --border: #d4cfc6;
+}
+
+.dark-mode {
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --text: #f0ece4;
+  --muted: #8a8480;
+  --accent: #e8622a;
+  --border: #2e2e2e;
+}
+
+/* ─── App shell ─── */
+.app {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ─── Header ─── */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-mark {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  transition: color 0.3s ease;
+}
+
+/* ─── Theme Toggle Button ─── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+.toggle-track {
+  width: 32px;
+  height: 18px;
+  border-radius: 999px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-thumb--dark {
+  transform: translateX(14px);
+}
+
+.toggle-label {
+  white-space: nowrap;
+}
+
+/* ─── Main content ─── */
+.main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+/* ─── Hero ─── */
+.hero {
+  margin-bottom: 4rem;
+}
+
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.hero-sub code {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.theme-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.82rem;
+  transition: all 0.3s ease;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ─── Cards Grid ─── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-icon {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.card-tag {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2em 0.55em;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* ─── Info strip ─── */
+.info-strip {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .header-inner { padding: 0 1rem; }
+  .main-content { padding: 2.5rem 1rem 4rem; }
+  .hero-title { font-size: 2.6rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+}
