@@ -1,0 +1,15 @@
+{
+  "name": "week_6",
+  "version": "1.0.0",
+  "main": "Patientlinkedlist.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
