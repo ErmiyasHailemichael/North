@@ -58,3 +58,5 @@ npm test -- --watchAll=false
 1. All required error messages appear when submitting an empty form
 2. Password missing an uppercase letter is rejected
 3. Confirm password that doesn't match password shows an error
+
+## Video demo
