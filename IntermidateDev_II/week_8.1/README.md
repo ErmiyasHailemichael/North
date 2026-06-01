@@ -1,16 +1,45 @@
-# React + Vite
+# Week 9 — Dynamic Poll Dashboard with Chart.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React component that integrates the Chart.js library using useEffect to build a real-time voting dashboard.
 
-Currently, two official plugins are available:
+## What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Displays a poll for "Favorite JavaScript Framework" with four options
+- Clicking Vote updates React state and the Chart.js bar chart in real time
+- Uses useRef to store the canvas element and the chart instance
+- Destroys the chart on unmount to prevent memory leaks
 
-## React Compiler
+## Key useEffect concepts demonstrated
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Concept | Where |
+|---|---|
+| Imperative instantiation | Creates new Chart() on first render |
+| State synchronization | Updates chart.data and calls .update() on re-renders |
+| Cleanup execution | Calls .destroy() on unmount |
+| Dependency array | [votes] — effect runs every time votes changes |
 
-## Expanding the ESLint configuration
+## How to run
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173 and click the vote buttons.
+
+## How to run tests
+
+```bash
+npm test
+```
+
+## Test cases
+
+| ID | Type | What it checks |
+|---|---|---|
+| TC-N1 | Normal | All four frameworks render on screen |
+| TC-N2 | Normal | All vote counts start at zero |
+| TC-N3 | Normal | Clicking vote increases that framework's count by 1 |
+| TC-E1 | Edge | Voting for one framework does not affect others |
+| TC-E2 | Edge | Clicking multiple times keeps accumulating |
+| TC-E3 | Edge | Canvas element is present in the DOM |
