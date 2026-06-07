@@ -10,7 +10,7 @@ Built for a streaming site scenario — compact layout on phones, full layout on
 The hook uses `useState` to store the window dimensions and `useEffect` to listen for resize events.
 When the window is resized, the state updates and the component re-renders with the new layout.
 When the component unmounts, the event listener is cleaned up automatically.
-
+```
 ## Project Structure
 src/
 ├── hooks/
@@ -20,7 +20,7 @@ src/
 │   └── StreamingLayout.jsx      # Layout component using the hook
 ├── App.jsx                      # Root component
 └── setupTests.js                # Vitest setup
-
+```
 ## How to Run
 
 ### Install dependencies
